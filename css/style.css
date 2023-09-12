@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "bebaskai";
+  src: url(../media/fonts/BebasKai.woff2);
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: helvetica;
+  height: 100vh;
+  max-width: 1920px;
+}
+
+nav.navbar {
+  background-color: rgb(128, 177, 166);
+  font-family: bebaskai;
+  font-size: 25px;
+}
+nav.navbar img {
+  width: 50px;
+}
+nav.navbar a {
+  color: whitesmoke;
+  margin: 0 10px;
+}
+nav.navbar .dropdown-menu {
+  background-color: rgb(87, 121, 113);
+}
+
+.cabecera_index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cabecera_index .video_index {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-height: auto;
+}
+.cabecera_index h1 {
+  position: absolute;
+}
+
+.contenedor_contadores {
+  text-align: center;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+.contenedor_contadores .contador {
+  width: 250px;
+  height: auto;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px black;
+  font-family: bebaskai;
+  margin: 10px 40px;
+  padding: 15px;
+}
+.contenedor_contadores .contador h3 {
+  font-size: 80px;
+}
+.contenedor_contadores .contador span {
+  font-size: 20px;
+}
+
+.pie_pagina {
+  background-color: #80b1a6;
+  font-family: bebaskai;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  align-content: center;
+  color: whitesmoke;
+}
+.pie_pagina .col {
+  align-self: center;
+  margin: 10px 0;
+}
+.pie_pagina li {
+  list-style: none;
+}
+.pie_pagina a img {
+  width: 40px;
+  margin: 0 10px;
+}
+.pie_pagina p {
+  margin-top: 15px;
+}
+
+.tapamarcas {
+  display: flex;
+  position: relative;
+  background: white;
+  width: 100%;
+  height: 40px;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 390px) {
+  .contenedor_contadores {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  .contenedor_contadores .contador {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px 1px black;
+    font-family: bebaskai;
+    margin: 10px 40px;
+    padding: 15px;
+  }
+  .contenedor_contadores .contador h3 {
+    font-size: 80px;
+  }
+  .contenedor_contadores .contador span {
+    font-size: 20px;
+  }
+  .tapamarcas {
+    display: flex;
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 40px;
+    bottom: 360px;
+  }
+  main.footer .col {
+    padding: 30px;
+    align-items: center;
+  }
+  main.footer a img {
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
