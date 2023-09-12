@@ -10,8 +10,7 @@
     src: url(../media/fonts/BebasKai.woff2);
 }
 
-body {
-    background-color: rgb(255, 255, 255);
+body{
     font-family: helvetica;
     height: 100vh;
     max-width: 1920px;
@@ -19,13 +18,20 @@ body {
 
 
 
+
 nav.navbar {
-    background-color: rgb(128, 177, 166);
+    background-color:#0C274F;
     font-family: bebaskai;
     font-size: 25px;
+    :hover{
+        color: rgb(255, 175, 175);
+    }
 
     img {
         width: 50px;
+        background: radial-gradient(white 45%, #0C274F);
+        border-radius:100%;
+        padding: 2px;
     }
 
     a {
@@ -34,9 +40,14 @@ nav.navbar {
     }
 
     .dropdown-menu {
-        background-color: rgb(87, 121, 113);
+        color: whitesmoke;
+        background-color: #123975;
+        :hover{
+            background-color: #15458e;
+        }
     }
 }
+
 
 .cabecera_index{
     display: flex;
@@ -52,6 +63,10 @@ nav.navbar {
     
     h1{
         position: absolute;
+        font-size: 100px;
+        font-family: bebaskai;
+        color: white;
+        text-shadow: 4px 4px 2px #15458e;
     }
 }
 
@@ -89,7 +104,7 @@ nav.navbar {
 
 
 .pie_pagina {
-    background-color: #80b1a6;
+    background-color: #0C274F;
     font-family: bebaskai;
     font-size: 20px;
     text-align: center;
