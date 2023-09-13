@@ -1,3 +1,17 @@
+h1, h3, h2 {
+  font-size: 100px;
+  font-family: bebaskai;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  font-size: 200px;
+}
+
+h3 {
+  font-size: 80px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -46,18 +60,28 @@ nav.navbar .dropdown-menu :hover {
   justify-content: center;
   align-items: center;
 }
-.cabecera_index .video_index {
+.cabecera_index .carrusel_index {
   position: relative;
   margin: 0;
   width: 100%;
   max-height: auto;
 }
-.cabecera_index h1 {
+.cabecera_index h1, .cabecera_index h2, .cabecera_index h3 {
   position: absolute;
-  font-size: 100px;
-  font-family: bebaskai;
-  color: white;
   text-shadow: 4px 4px 2px #15458e;
+}
+
+main.cuerpo_pagina {
+  background-color: #174C9C;
+  color: white;
+}
+
+.descripcion_index {
+  margin: 15px;
+  padding: 30px;
+}
+.descripcion_index .contenedor_descripcion_index {
+  margin: 60px 0;
 }
 
 .contenedor_contadores {
@@ -66,6 +90,7 @@ nav.navbar .dropdown-menu :hover {
   align-self: center;
   justify-content: center;
   margin: 40px 0;
+  color: black;
 }
 .contenedor_contadores .contador {
   width: 250px;
@@ -78,6 +103,7 @@ nav.navbar .dropdown-menu :hover {
   padding: 15px;
 }
 .contenedor_contadores .contador h3 {
+  color: rgb(0, 0, 0);
   font-size: 80px;
 }
 .contenedor_contadores .contador span {
@@ -101,24 +127,44 @@ nav.navbar .dropdown-menu :hover {
   list-style: none;
 }
 .pie_pagina a img {
-  width: 40px;
-  margin: 0 10px;
+  width: 30px;
+  margin: 10px 10px;
 }
 .pie_pagina p {
   margin-top: 15px;
 }
 
+.servicio_urgencias_index {
+  margin: 15px;
+  padding: 30px;
+  border-radius: 0px 30px 0 30px;
+  background: linear-gradient(to right, #E14C40, #381210);
+}
+.servicio_urgencias_index .titulo_urgencias {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.servicio_urgencias_index .titulo_urgencias img {
+  width: 50px;
+  height: 50px;
+}
+.servicio_urgencias_index .titulo_urgencias h3 {
+  font-size: 50px;
+}
+
 .tapamarcas {
   display: flex;
   position: relative;
-  background: white;
+  background: #174C9C;
   width: 100%;
   height: 40px;
   bottom: 30px;
 }
 
 @media screen and (max-width: 390px) {
-  .cabecera_index h1 {
+  .cabecera_index h1, .cabecera_index h2, .cabecera_index h3 {
     font-size: 40px;
   }
   .contenedor_contadores {
@@ -146,23 +192,13 @@ nav.navbar .dropdown-menu :hover {
     font-size: 20px;
   }
   .tapamarcas {
-    display: flex;
-    position: relative;
-    background: rgb(255, 255, 255);
     width: 100%;
     height: 40px;
-    bottom: 360px;
-  }
-  main.footer .col {
-    padding: 30px;
-    align-items: center;
-  }
-  main.footer a img {
-    width: 50px;
+    bottom: 30px;
   }
 }
 @media screen and (min-width: 391px) and (max-width: 768px) {
-  .cabecera_index h1 {
+  .cabecera_index h1, .cabecera_index h2, .cabecera_index h3 {
     font-size: 40px;
   }
   .contenedor_contadores {
@@ -190,19 +226,9 @@ nav.navbar .dropdown-menu :hover {
     font-size: 20px;
   }
   .tapamarcas {
-    display: flex;
-    position: relative;
-    background: rgb(255, 255, 255);
     width: 100%;
     height: 40px;
-    bottom: 345px;
-  }
-  main.footer .col {
-    padding: 30px;
-    align-items: center;
-  }
-  main.footer a img {
-    width: 50px;
+    bottom: 35px;
   }
 }
 

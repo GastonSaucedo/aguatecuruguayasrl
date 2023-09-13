@@ -1,0 +1,17 @@
+@mixin encabezados() {
+    h1 {
+        font-size: 100px;
+        font-family: bebaskai;
+        color: rgb(255, 255, 255);
+    }
+
+    h2{
+        @extend h1;
+        font-size: 200px;
+    }
+
+    h3{
+        @extend h1;
+        font-size: 80px;
+    }
+}
