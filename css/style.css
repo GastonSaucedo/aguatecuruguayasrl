@@ -237,6 +237,29 @@ main.cuerpo_pagina .tapamarcas {
   margin-top: 15px;
 }
 
+.btn-wsp{
+  display: flex;
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  text-decoration: none;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 30px;
+  background-color: #25D366;
+  color: white;
+  z-index: 100;
+}
+
+.btn-wsp:hover{
+  background-color: white;
+  color: #25D366;
+}
+
 @media (max-width: 390px) {
   .tapamarcas {
     width: 100%;
