@@ -1,4 +1,8 @@
 @import "./partials/resets";
+@import "./partials/mixins";
+@import "./partials/carruselmarcas";
+
+@include encabezados();
 
 @font-face {
     font-family: "bebaskai";
@@ -29,6 +33,7 @@ nav.navbar {
     .dropdown-menu {
         color: whitesmoke;
         background-color: #123975;
+        font-size: 18px;
 
         :hover {
             background-color: #15458e;
@@ -36,171 +41,181 @@ nav.navbar {
     }
 }
 
+.cabecera_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-main.cuerpo_pagina {
-    @import "./partials/mixins";
-    @include encabezados();
-    
-    background-color: #174C9C;
-    color: white;
-    font-size: 1.2rem;
-    max-width: 100%;
-
-    .cabecera_index {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .carrusel_index {
-            position: relative;
-            margin: 0;
-            width: 100%;
-            max-height: auto;
-        }
-
-        h1 {
-            position: absolute;
-            text-shadow: 4px 4px 2px #15458e;
-        }
-    }
-
-
-
-
-
-    .descripcion_index {
-        margin: 15px;
-        padding: 30px;
-
-        .contenedor_descripcion_index {
-            margin: 0 0 40px 0;
-            text-align: center;
-        }
-    }
-
-    .contenedor_contadores {
-        margin: 50px auto;
-        text-align: center;
-        color: black;
-
-        .contador {
-            width: 250px;
-            height: auto;
-            border-radius: 30px;
-            background-color: white;
-            box-shadow: 0 0 10px 1px black;
-            font-family: bebaskai;
-            margin: 10px 40px;
-            padding: 15px;
-
-            h3 {
-                color: rgb(0, 0, 0);
-                font-size: 6vw;
-            }
-
-            span {
-                font-size: 20px;
-            }
-        }
-
-    }
-
-    .servicios_index {
-
-        h2 {
-            text-align: center;
-        }
-
-        .servicio_urgencias_index {
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 0px 30px 0 30px;
-            background: linear-gradient(to right, #0C274F, #216BDB);
-            width: 60%;
-            box-shadow: 10px 10px 10px black;
-            text-align: center;
-
-            .titulo_urgencias {
-                display: flex;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    position: relative;
-                    width: 60px;
-                    height: 60px;
-                    bottom: 5px;
-                    margin: 0 15px;
-                }
-             
-            }
-
-            p {
-                margin: 15px;
-            }
-
-            button {
-                display: flex;
-                align-items: center;
-                border-width: 3px;
-                border-radius: 60px;
-                background: #3498db;
-                &:hover{
-                    background: #57a4d8;
-                }
-                a {
-                    font-family: 'Lato';
-                    text-decoration: none;
-                    font-size: 30px;
-                    color: #ffffff;
-                    margin: auto;
-                }
-                img{
-                    width: 10%;
-                    margin: 0.3em;
-                }
-
-            }
-        }
-
-
-        .row{
-            margin: auto;
-            margin-bottom: 4em;
-            .card{
-                margin: 15px;
-                background-color: #123975;
-                border-radius: 15px;
-                height: 500px;
-                .card-title{
-                    font-size: 20px;
-                   
-                }
-            }
-        }
-
-
-
-    }
-
-    @import "./partials/carruselmarcas";
-
-
-
-
-
-
-    .tapamarcas {
-        display: flex;
+    .carrusel_index {
         position: relative;
-        background: #174C9C;
+        margin: 0;
         width: 100%;
-        height: 40px;
-        bottom: 35px;
+        max-height: auto;
+    }
+
+    h1 {
+        position: absolute;
+        text-shadow: 4px 4px 2px #15458e;
     }
 }
+
+
+
+
+
+.descripcion_index {
+    margin: 15px;
+    padding: 30px;
+
+    .contenedor_descripcion_index {
+        margin: 0 0 40px 0;
+        text-align: center;
+    }
+}
+
+.contenedor_contadores {
+    margin: 50px auto;
+    text-align: center;
+    color: black;
+
+    .contador {
+        width: 250px;
+        height: auto;
+        border-radius: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px 1px black;
+        font-family: bebaskai;
+        margin: 10px 40px;
+        padding: 15px;
+
+        h3 {
+            color: rgb(0, 0, 0);
+            font-size: 6vw;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+}
+
+.servicios_index {
+    text-align: center;
+
+    .servicio_urgencias_index {
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 0px 30px 0 30px;
+        background: linear-gradient(to right, #0C274F, #216BDB);
+        width: 60%;
+        box-shadow: 10px 10px 10px black;
+
+        .titulo_urgencias {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                bottom: 5px;
+                margin: 0 15px;
+            }
+
+        }
+
+        p {
+            margin: 15px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            border-width: 3px;
+            border-radius: 60px;
+            background: #3498db;
+
+            &:hover {
+                background: #57a4d8;
+            }
+
+            a {
+                font-family: 'Lato';
+                text-decoration: none;
+                font-size: 30px;
+                color: #ffffff;
+                margin: auto;
+            }
+
+            img {
+                width: 10%;
+                margin: 0.3em;
+            }
+
+        }
+    }
+
+
+    .row {
+        margin: auto;
+        margin-bottom: 4em;
+
+        .card {
+            margin: 15px;
+            background-color: #123975;
+            border-radius: 15px;
+            height: 380px;
+
+            .card-title {
+                font-size: 20px;
+
+            }
+        }
+    }
+
+
+
+}
+
+
+.btn-wsp {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0);
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+.tapamarcas {
+    display: flex;
+    position: relative;
+    background: #174C9C;
+    width: 100%;
+    height: 40px;
+    bottom: 35px;
+}
+
 
 
 .pie_pagina {
@@ -245,43 +260,150 @@ main.cuerpo_pagina {
 
 
 
-@media (max-width: 390px) {
+@media screen and (max-width: 390px) {
 
-    .tapamarcas {
-        width: 100%;
-        height: 40px;
-        bottom: 30px;
+    h2 {
+        font-size: 18vw;
     }
 
+    .descripcion_index{
+        .contenedor_descripcion_index{
+            text-align: inherit;
+            font-size: 20px;
+        }
+    }
+
+    .contenedor_contadores {
+        .contador {
+            h3 {
+                font-size: 15vw;
+            }
+        }
+    }
+
+    .feed_instagram{
+        margin: 25px;
+    }
+
+    .servicios_index {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .servicio_urgencias_index {
+            width: 95%;
+            font-size: 18px;
+
+            .titulo_urgencias {
+                h3 {
+                    font-size: 11vw;
+                }
+            }
+
+
+            button {
+                position: relative;
+                justify-self: center;
+                width: 160%;
+
+
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .row {
+    
+            .card {
+                height: 380px;
+    
+                .card-title {
+                    font-size: 20px;
+    
+                }
+            }
+        }
+
+        .clientes_index{
+            font-size: 12vw;
+        }
+
+
+    }
 }
 
 
 @media screen and (min-width: 391px) and (max-width: 768px) {
 
-    .descripcion_index {
-        .contenedor_descripcion_index {
-            h2{
-                font-size: 9vw;
-            }
+    h2 {
+        font-size: 18vw;
+    }
+    .descripcion_index{
+
+        .contenedor_descripcion_index{
+            text-align: justify;
         }
     }
 
     .contenedor_contadores {
-    .contador {
-        h3 {
-            font-size: 9vw;
+        .contador {
+            h3 {
+                font-size: 15vw;
+            }
         }
     }
+
+    .feed_instagram{
+        margin: 25px;
+    }
+
+    .servicios_index {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .servicio_urgencias_index {
+            width: 95%;
+
+            .titulo_urgencias {
+                h3 {
+                    font-size: 11vw;
+                }
+            }
+
+
+            button {
+                position: relative;
+                justify-self: center;
+                width: 160%;
+
+
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .row {
+    
+            .card {
+                height: 380px;
+    
+                .card-title {
+                    font-size: 20px;
+    
+                }
+            }
+        }
+
+        .clientes_index{
+            font-size: 12vw;
+        }
+
+
     }
 
 
 
 
-    .tapamarcas {
-        background-color: white;
-        width: 100%;
-        height: 40px;
-        bottom: 800px;
-    }
 
 }
